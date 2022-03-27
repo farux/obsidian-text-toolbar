@@ -88,3 +88,12 @@ This is not required for Markdowns or Macros, so it can be left blank.
 suggest.ts  is the copyrighted work of Liam Cain (https://github.com/liamcain) obsidian-periodic-notes (https://github.com/liamcain/obsidian-periodic-notes).
 
 popper.js https://popper.js.org/
+
+Dummy text from https://www.blindtextgenerator.com/
+
+CSS Reference:
+- https://baigie.me/officialblog/2021/02/25/css-tips-1/
+- https://saruwakakun.com/html-css/reference/buttons
+- https://0edition.net/archives/1448
+- https://jajaaan.co.jp/css/css-headline/
+
