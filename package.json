@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-text-styler",
+	"name": "obsidian-text-toolbar",
 	"version": "1.0.1",
 	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
 	"main": "main.js",
@@ -20,5 +20,8 @@
 		"obsidian": "^0.12.17",
 		"tslib": "2.3.1",
 		"typescript": "4.4.4"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.2"
 	}
 }

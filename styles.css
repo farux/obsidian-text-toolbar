@@ -1,4 +1,258 @@
-/* Sets all the text color to red! */
-body {
-    color: red;
+/* stylelint-disable font-family-name-quotes */
+:root {
+	--tt-toolbar-bg-color: #666666bf;
+	--tt-toolbar-blur: blur(2);
+	--tt-toolbar-border: 0;
+	--tt-toolbar-border-radius: 6px;
+	--tt-toolbar-padding: 15px;
+	--tt-toolbar-buttons-per-line: repeat(8, 1fr);
+	--tt-toolbar-number-of-rows: 100px;
+	--tt-toolbar-top: unset;
+	--tt-toolbar-bottom: 0;
+	--tt-toolbar-left: unset;
+	--tt-toolbar-right: unset;
+	--tt-btn-size: 50px;
+	--tt-btn-gap: 15px;
+	--tt-btn-font-size: x-large;
+	--tt-btn-default-bg-color: #202020;
+	--tt-btn-focus-bg-color: #202020;
+	--tt-btn-hover-bg-color: #404040;
+	--tt-btn-default-border: 0;
+	--tt-btn-focus-border: 4px solid #7f6df2;
+	--tt-btn-hover-border: 4px solid #7f6df2;
+	--tt-btn-border-radius: 6px;
+	--tt-btn-default-font-color: #dcddde;
+
+	/* a */
+	--background-primary: #202020;
+	--background-primary-alt: #1a1a1a;
+	--background-secondary: #161616;
+	--background-secondary-alt: #000;
+	--background-modifier-border: #333;
+	--background-modifier-form-field: rgb(0 0 0 / 30%);
+	--background-modifier-form-field-highlighted: rgb(0 0 0 / 22%);
+	--background-modifier-box-shadow: rgb(0 0 0 / 30%);
+	--background-modifier-success: #197300;
+	--background-modifier-error: #3d0000;
+	--background-modifier-error-rgb: 61, 0, 0;
+	--background-modifier-error-hover: #470000;
+	--background-modifier-cover: rgb(0 0 0 / 80%);
+	--text-accent: #7f6df2;
+	--text-accent-hover: #8875ff;
+	--text-normal: #dcddde;
+	--text-muted: #999;
+	--text-muted-rgb: 153, 153, 153;
+	--text-faint: #666;
+	--text-error: #f33;
+	--text-error-hover: #900;
+	--text-highlight-bg: rgb(255 255 0 / 40%);
+	--text-highlight-bg-active: rgb(255 128 0 / 40%);
+	--text-selection: rgb(23 48 77 / 99%);
+	--text-on-accent: #dcddde;
+	--interactive-normal: #2a2a2a;
+	--interactive-hover: #303030;
+	--interactive-accent: #483699;
+	--interactive-accent-rgb: 72, 54, 153;
+	--interactive-accent-hover: #4d3ca6;
+	--interactive-success: #197300;
+	--scrollbar-active-thumb-bg: rgb(255 255 255 / 20%);
+	--scrollbar-bg: rgb(255 255 255 / 5%);
+	--scrollbar-thumb-bg: rgb(255 255 255 / 10%);
+	--highlight-mix-blend-mode: lighten;
+}
+
+.text-tool-bar {
+	animation: pop-d 200ms forwards ease-in-out;
+	backdrop-filter: var(--tt-toolbar-blur);
+	background-color: var(--tt-toolbar-bg-color);
+	border: var(--tt-toolbar-border);
+	border-radius: var(--tt-toolbar-border-radius);
+	bottom: var(--tt-toolbar-bottom);
+	box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+	color: #dcddde;
+	left: var(--tt-toolbar-left);
+	padding: var(--tt-toolbar-padding);
+
+	/* z-index: var(--layer-tooltip); */
+	position: fixed;
+	right: var(--tt-toolbar-right);
+
+	/* line-height: 20px; */
+	top: var(--tt-toolbar-top);
+	z-index: 50;
+}
+
+.text-tool-bar-container {
+	display: grid;
+
+	/* column-gap: var(--tt-btn-gap); */
+	gap: var(--tt-btn-gap);
+	grid-template-columns: var(--tt-toolbar-buttons-per-line);
+	height: var(--tt-toolbar-number-of-rows);
+	overflow: auto;
+	padding: 0;
+	place-items: center;
+	scroll-snap-type: y mandatory;
+}
+
+/* .text-styler-container:last-child::after {
+	background-color: hotpink;
+	content: 'x';
+	height: 50px;
+	position: relative;
+	top: =15px;
+} */
+
+/* .text-styler-container::after {
+	background-color: aqua;
+	color: #0000;
+	content: '.';
+	height: 50px;
+	position: relative;
+	top: 0;
+} */
+
+.text-tool-bar-btn {
+	background-color: var(--tt-btn-default-bg-color);
+	border: var(--tt-btn-default-border);
+	border-radius: var(--tt-btn-border-radius);
+	color: var(--tt-btn-default-font-color);
+	display: grid;
+
+	/* box-shadow: 0 2px 8px var(--background-modifier-box-shadow); */
+	height: var(--tt-btn-size);
+
+	/* margin: 0 0 var(--tt-btn-gap) 0; */
+	margin: 0;
+	outline: none !important;
+	overflow: hidden;
+	padding: 0;
+	place-items: center;
+
+	/* scroll-margin: 0; */
+	scroll-snap-align: start;
+	scroll-snap-stop: normal;
+	text-align: center;
+	width: var(--tt-btn-size);
+}
+
+.text-tool-bar-btn:focus {
+	background-color: var(--tt-btn-focus-bg-color);
+	border: var(--tt-btn-focus-border);
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.text-tool-bar-btn:hover {
+	background-color: var(--tt-btn-hover-bg-color);
+	border: var(--tt-btn-hover-border);
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+/* .text-styler-btn:focus-within {
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.text-styler-btn:focus-visible {
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+} */
+
+.text-tool-bar-label-container {
+	box-sizing: border-box;
+	display: grid;
+	font-size: var(--tt-btn-font-size);
+	height: 100%;
+	overflow: hidden;
+	place-items: center;
+	width: 100%;
+}
+
+.text-tool-bar-label-container:focus {
+	background-color: transparent;
+	box-shadow: 0;
+	outline: none !important;
+}
+
+.text-tool-bar-label {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	font-size: var(--tt-btn-font-size);
+	white-space: nowrap;
+}
+
+.text-tool-bar-label:focus {
+	background-color: transparent;
+	box-shadow: 0;
+	outline: none !important;
+}
+
+.text-tool-bar-label::before,
+.text-tool-bar-label::after {
+	z-index: -1 !important;
+}
+@keyframes pop-d {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+
+	20% {
+		opacity: 0.7;
+		transform: scale(1.02);
+	}
+
+	40% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.text-toolbar-settings-label {
+	color: var(--text-muted);
+	font-size: var(--font-settings-small);
+}
+
+.tt-setting-structure-wrap {
+	border: 1px solid var(--background-modifier-border);
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1em;
+}
+
+.tt-setting-tab-label {
+	background: var(--text-muted);
+	color: var(--text-on-accent);
+	margin-right: 5px;
+	order: -1;
+	padding: 3px 12px;
+}
+
+.tt-setting-tab-content {
+	display: none;
+	margin-top: 1em;
+	width: 100%;
+}
+
+/* アクティブなタブ */
+.tt-setting-tab-switch:checked + .tt-setting-tab-label {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+
+.tt-setting-tab-switch:checked + .tt-setting-tab-label + .tt-setting-tab-content {
+	display: block;
+}
+
+/* ラジオボタン非表示 */
+.tt-setting-tab-switch {
+	display: none;
 }
