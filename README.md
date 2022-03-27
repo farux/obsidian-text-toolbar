@@ -1,4 +1,7 @@
 ## Obsidian Text Toolbar Plugin
+
+A customizable toolbar that allows CSS snippets, markdowns, and built-in macros to be applied to selected text.
+
 ![00001](https://user-images.githubusercontent.com/33874906/160287593-ad28ef68-d8d7-410d-806f-d22d2dbce46b.gif)
 
 
