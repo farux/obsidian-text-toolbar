@@ -63,7 +63,7 @@ There are three types of actions.
 
     Some actions add Markdown elements and HTML tags at the same time.
 
-3. Actions with the prefix 'MAC' execute Macros.
+3. Actions with the prefix 'MAC' execute built-in Macros.
 ![04](https://user-images.githubusercontent.com/33874906/160282147-b17aae3d-8388-423e-bc97-7634843c14f5.gif)
 ---
 ### Label:
