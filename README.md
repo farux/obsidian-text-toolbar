@@ -4,7 +4,9 @@
 
 ## How to use
 
-When text is selected in the editor view, a toolbar appears.
+To begin, register your required actions in the toolbar.
+
+Selecting text in the editor view will show your customized toolbar.
 
 Click the button to apply CSS snippets, markdowns, built-in macros, etc. to the selected text.
 
