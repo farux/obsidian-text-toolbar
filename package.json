@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-text-toolbar",
 	"version": "1.0.1",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "A customizable toolbar that allows CSS snippets, markdowns, and built-in macros to be applied to selected text.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",

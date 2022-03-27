@@ -3,7 +3,7 @@
 	"name": "Text Toolbar",
 	"version": "1.0.1",
 	"minAppVersion": "0.12.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
+	"description": "A customizable toolbar that allows CSS snippets, markdowns, and built-in macros to be applied to selected text.",
 	"author": "faru",
 	"authorUrl": "https://github.com/farux",
 	"isDesktopOnly": false

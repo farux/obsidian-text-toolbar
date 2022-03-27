@@ -42,7 +42,6 @@ export const fontSizeAdjust = (Class: string) => {
 		label.style.zIndex = 'auto';
 
 		const contentWidth = label.parentElement.clientWidth;
-		const font_size = document.defaultView.getComputedStyle(label, null).fontSize;
 		const labelWidth = label.clientWidth;
 
 		if (labelWidth > contentWidth) {
