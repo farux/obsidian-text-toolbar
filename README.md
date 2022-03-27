@@ -1,4 +1,5 @@
 ## Obsidian Text Toolbar Plugin
+![01](https://user-images.githubusercontent.com/33874906/160278486-f4a899d1-9e4a-466e-94e6-aa001d690b50.gif)
 
 This is a sample plugin for Obsidian (https://obsidian.md).
 
