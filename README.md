@@ -10,6 +10,8 @@ Selecting text in the editor view will show your customized toolbar.
 
 Click the button to apply CSS snippets, markdowns, built-in macros, etc. to the selected text.
 
+Selecting multiple texts with the Alt and Shift keys allows you to apply the same action at once.
+
 ---
 ### Key and mouse operation
 
